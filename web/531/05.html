@@ -1,0 +1,78 @@
+
+<html><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <!-- <script src="//upcdn.b0.upaiyun.com/libs/jquery/jquery-2.0.3.min.js"></script> -->
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <style>
+        *{padding: 0;margin: 0}
+        body{background: #282c2d;text-align:center}
+        a{text-decoration: none}
+        body>div{width: 19%;float: left;padding: 0 7%;}
+        body>div>a>p:first-child{width: 100%;overflow: hidden;border-radius:50%;border: double 2px #222;margin-bottom: 0}
+        body>div>a>p:last-child{font-size: 0.8em;color:white;margin: 0.4em 0}
+        body>div>a img{width: 100%;}
+    </style>
+    <!-- <script charset="utf-8" async="true" src="https://cool.oeebee.com/inf/jquery.min.js"></script></head> -->
+
+<body>
+<div><a href="javascript:xxx();"><p><img src="../image/0_015.gif"></p><p>关注进入</p></a></div>
+<div><a href="javascript:xxx();"><p><img src="../image/0_012.gif"></p><p>关注进入</p></a></div>
+<div><a href="javascript:xxx();"><p><img src="../image/0_003.gif"></p><p>关注进入</p></a></div>
+<div><a href="javascript:xxx();"><p><img src="../image/0_011.gif"></p><p>关注进入</p></a></div>
+<div><a href="javascript:xxx();"><p><img src="../image/0_015.gif"></p><p>关注进入</p></a></div>
+<div><a href="javascript:xxx();"><p><img src="../image/0_012.gif"></p><p>关注进入</p></a></div>
+<div><a href="javascript:xxx();"><p><img src="../image/0_003.gif"></p><p>关注进入</p></a></div>
+<div><a href="javascript:xxx();"><p><img src="../image/0_011.gif"></p><p>关注进入</p></a></div>
+<div><a href="javascript:xxx();"><p><img src="../image/0_015.gif"></p><p>关注进入</p></a></div>
+<div><a href="javascript:xxx();"><p><img src="../image/0_012.gif"></p><p>关注进入</p></a></div>
+<div><a href="javascript:xxx();"><p><img src="../image/0_003.gif"></p><p>关注进入</p></a></div>
+<div><a href="javascript:xxx();"><p><img src="../image/0_011.gif"></p><p>关注进入</p></a></div>
+<div><a href="javascript:xxx();"><p><img src="../image/0_015.gif"></p><p>关注进入</p></a></div>
+<div><a href="javascript:xxx();"><p><img src="../image/0_012.gif"></p><p>关注进入</p></a></div>
+<div><a href="javascript:xxx();"><p><img src="../image/0_003.gif"></p><p>关注进入</p></a></div>
+
+
+
+<div id="er" style="width: 90%;  position: fixed;z-index: 9;top: 10%;left: 5%;background: #fff; padding: 0; display: none;">
+    <span id="guan" style="position: absolute;top: -20px;right: 0px;width: 50px;height: 20px;background: #fff;border-radius: 8px 8px 0 0;font-weight: 500">关闭</span>
+    <p style="padding: 8px 6px;text-align: center;font-size: 18px;color:red;">哥哥加我~~~有惊喜哦！</p>
+    <img id="tup" style="display:block; width: 80%;margin-left: 10%;margin-top: 10px;margin-bottom: 10px;" src="" alt="">
+    <p style="padding: 8px 6px;text-align: center;font-size: 18px;color:blue;">长按识别上面二维码！惊喜等你来哦！</p>
+</div>
+
+
+<script>
+    $(document).ready(function(){
+        pushHistory();
+        window.addEventListener("popstate",function(e){
+            // alert(1111);
+            // pushHistory();  
+            location.href = "06.html";
+        },false);
+
+
+        function pushHistory(){
+            var state = {
+                title:"测试11111",
+                url:"05.html"
+            };
+            window.history.pushState(state,state.title,state.url);
+        }
+    })
+
+
+    function back(obj) {
+        // body...
+        location.href = "06.html";
+    }
+
+
+
+</script>
+
+</body></html>

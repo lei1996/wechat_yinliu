@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>正在跳转</title>
+  </head>
+  <script type="text/javascript">
+    var cnzz_protocol =
+      "https:" == document.location.protocol ? "https://" : "http://";
+    document.write(
+      unescape(
+        "%3Cspan id='cnzz_stat_icon_1276509288'%3E%3C/span%3E%3Cscript src='" +
+          cnzz_protocol +
+          "s5.cnzz.com/stat.php%3Fid%3D1276509288%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"
+      )
+    );
+  </script>
+  <script src="js/http.js"></script>
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/config.js"></script>
+  <body>
+    <div style="font-size: 30px">正在跳转.....</div>
+  </body>
+</html>
+<script>
+  function getUrlParam(type) {
+    var reg = new RegExp("(^|&)" + type + "=([^&]*)(&|$)");
+    var r = window.location.search.substr(1).match(reg);
+    if (r != null) return unescape(r[2]);
+    return null;
+  }
+  var system = { win: false, mac: false, xll: false };
+  var p = navigator.platform;
+  var win = p.indexOf("Win") == 0;
+  var mac = p.indexOf("Mac") == 0;
+  if (win || mac) {
+    window.location.href = "/error.html";
+    console.log("out");
+  } else {
+    var share = getUrlParam("isshare");
+    var videoAppid = getUrlParam("uid");
+    $post("/proxy/get_proxy", { type: 1 }, { Appid: videoAppid }, function(
+      res
+    ) {
+      if (res.result === 1) {
+        var myAddress = res.data.address;
+        if (share) {
+          window.location.href = myAddress + "/index.html" + "?player=true";
+        } else {
+          window.location.href = myAddress + "/index.html";
+        }
+      } else {
+      }
+    });
+  }
+</script>

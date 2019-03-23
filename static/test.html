@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+<div style="height: 40px; line-height: 40px;position: fixed;top: 0;left: 0;width: 100%;z-index: 9999;background: #000;color: #ffd8ae;"><span id="fanhui">&nbsp;&nbsp;<&nbsp;返回</span> <span id="tous" style="display: inline-block;float: right;color: #ffd8ae;padding-right: 10px;">投诉</span></div>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script>
+    var u = navigator.userAgent;
+    var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
+    var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+    $(document).ready(function(){
+        if (isAndroid) {
+            var fanhui = document.getElementById("fanhui")
+            fanhui.css("display", "none")
+        }
+    });
+</script>
+</body>
+</html>
